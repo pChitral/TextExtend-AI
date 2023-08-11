@@ -51,7 +51,7 @@ def main():
             ]
 
     # OpenAI API Calls
-    if st.button("Increase Word Count", disabled=upload_button_disabled):
+    if st.button("Generate", disabled=upload_button_disabled):
         progress_bar = st.progress(0)
         response_list = []
 
