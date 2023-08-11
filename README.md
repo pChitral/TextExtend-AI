@@ -116,7 +116,10 @@ Make sure to install the necessary dependencies as specified in the `requirement
 
 ## Usage
 
-1. Run the python script in your terminal.
+1. Run the python script by running the following command in your terminal
+```python
+streamlit run app.py
+```
 2. Input the System Name and Compose Prompt.
 3. Upload your PDF document.
 4. Click on the `Transform to Elegant Document` button.
