@@ -1,6 +1,23 @@
 # TextExtend AI: Amplify Your Word Documents from PDFs to Word with OpenAI
 
-This script transforms a PDF document into an elegant Word document using OpenAI's GPT-3 language model. It integrates OpenAI API to generate natural language content.
+This repository contains a Python script that transforms a PDF document into a stylish, AI-enhanced Word document using OpenAI's GPT-3 language model. The primary purpose of this script is to provide a user-friendly interface for uploading PDF files, entering system names, and composing prompts. The resulting Word document can be freely edited and customized by the user. With the implementation of this script, users can transform the content in a specific form at a single click of a button without worrying about the max prompt limit.
+
+## Table of Contents
+
+- [TextExtend AI: Amplify Your Word Documents from PDFs to Word with OpenAI](#textextend-ai-amplify-your-word-documents-from-pdfs-to-word-with-openai)
+  - [Table of Contents](#table-of-contents)
+  - [Setting Up OpenAI API](#setting-up-openai-api)
+  - [Main Function](#main-function)
+    - [Step 1: Upload PDF and Input](#step-1-upload-pdf-and-input)
+    - [Step 2: PDF Processing](#step-2-pdf-processing)
+    - [Step 3: OpenAI API Calls](#step-3-openai-api-calls)
+    - [Step 4: Word Document Creation](#step-4-word-document-creation)
+    - [Step 5: Download the Transformed Document](#step-5-download-the-transformed-document)
+  - [Usage](#usage)
+  - [Contributions](#contributions)
+  - [Code of Conduct](#code-of-conduct)
+  - [License](#license)
+  - [Conclusion](#conclusion)
 
 The script uses the `streamlit` library to create a simple web app interface for uploading a PDF file, entering a system name and composing a prompt.
 
@@ -109,8 +126,16 @@ Make sure to install the necessary dependencies as specified in the `requirement
 
 This project is open-source and contributions are more than welcome. If you wish to contribute, please adhere to the code of conduct, fork the project, make your changes and submit a pull request.
 
+## Code of Conduct
+
+We aim to foster an open and welcoming environment in this project. Please read our [Code of Conduct](./CODE_OF_CONDUCT.md) to understand the expected behaviors.
+
+## License
+
+This project is open source and available under the [MIT License](./LICENSE.md).
+
 ## Conclusion
 
-Wordify is a free tool that accepts PDF as input and outputs an AI-enhanced Word document. The Word document can be edited as per the user's needs, making it a very flexible tool. Please note that the source code is available on GitHub.
+TextExtend AI is a free tool that accepts PDF as input and outputs an AI-enhanced Word document. The Word document can be edited as per the user's needs, making it a versatile tool for a variety of applications. Please note that the source code is available on GitHub.
 
-Remember, this tool is to help you write better and not to replace your unique writing style and creativity. Use it responsibly!
+This tool is designed to assist you in creating polished, professional documents, not to replace your unique writing style and creativity. Use it responsibly and maximize the benefit of automation while retaining your creative control!
