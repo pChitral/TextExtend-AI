@@ -1,4 +1,4 @@
-# Elegant PDF to Word Transformation Python Script
+# TextExtend AI: Amplify Your Word Documents from PDFs with GPT-3"
 
 This script transforms a PDF document into an elegant Word document using OpenAI's GPT-3 language model. It integrates OpenAI API to generate natural language content.
 
