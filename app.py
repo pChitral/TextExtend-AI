@@ -16,7 +16,7 @@ OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 
 def main():
-    st.title("Wordify: Increase the length of your document with AI")
+    st.title("TextExtend AI: Amplify Your Word Documents from PDFs to Word with OpenAI")
 
     # User Input Section
     st.header("Step 1: Upload PDF and Input")
@@ -24,8 +24,8 @@ def main():
     prompt = st.text_area("Compose Your Prompt:", key="prompt")
 
     # Add input fields for temperature and max_tokens
-    temperature = st.slider("Select Temperature (0 to 1)", 0.0, 1.0, 0.8, 0.01)
-    max_tokens = st.slider("Select Max Tokens (1 to 2048)", 1, 2048, 1500)
+    temperature = st.slider("Select Creativity Level", 0.0, 1.0, 0.8, 0.01)
+    max_tokens = st.slider("Select Max Tokens", 1, 2048, 1500)
 
     # Upload PDF File
     uploaded_file = st.file_uploader("Upload PDF Document", type=["pdf"])
@@ -51,7 +51,7 @@ def main():
             ]
 
     # OpenAI API Calls
-    if st.button("Transform to Elegant Document", disabled=upload_button_disabled):
+    if st.button("Increase Word Count", disabled=upload_button_disabled):
         progress_bar = st.progress(0)
         response_list = []
 
@@ -87,7 +87,7 @@ def main():
         # Display and Download Word Document
         with open(doc_file_name + ".docx", "rb") as docx_file:
             st.download_button(
-                "Download Elegant Document",
+                "Download",
                 docx_file.read(),
                 f"{doc_file_name}.docx",
             )
