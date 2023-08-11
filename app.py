@@ -23,6 +23,10 @@ def main():
     system = st.text_input("Enter System Name:", key="system")
     prompt = st.text_area("Compose Your Prompt:", key="prompt")
 
+    # Add input fields for temperature and max_tokens
+    temperature = st.slider("Select Temperature (0 to 1)", 0.0, 1.0, 0.8, 0.01)
+    max_tokens = st.slider("Select Max Tokens (1 to 2048)", 1, 2048, 1500)
+
     # Upload PDF File
     uploaded_file = st.file_uploader("Upload PDF Document", type=["pdf"])
 
@@ -66,8 +70,8 @@ def main():
             response = openai.Completion.create(
                 model="text-davinci-003",
                 prompt=full_prompt,
-                temperature=0.8,
-                max_tokens=1500,
+                temperature=temperature,
+                max_tokens=max_tokens,
             )
             output = response.choices[0].text.strip()
             response_list.append(output)
