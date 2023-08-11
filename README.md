@@ -18,6 +18,7 @@ from dotenv import load_dotenv
 ```
 
 ## Setting Up OpenAI API
+
 The script requires setting up an OpenAI API key. The key is stored in an environmental variable which is loaded using `load_dotenv()`. Ensure to set up the `OPENAI_API_KEY` in your environment.
 
 ```python
@@ -26,6 +27,7 @@ OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 ```
 
 ## Main Function
+
 The `main` function runs the primary logic of the script.
 
 ```python
@@ -34,6 +36,7 @@ def main():
 ```
 
 ### Step 1: Upload PDF and Input
+
 The user is prompted to enter a system name and compose a prompt. The user is then able to upload a PDF document.
 
 ```python
@@ -45,6 +48,7 @@ The user is prompted to enter a system name and compose a prompt. The user is th
 The upload button is only enabled when both system name and prompt are provided.
 
 ### Step 2: PDF Processing
+
 The uploaded PDF file is processed using `PyPDF2.PdfReader`. The extracted text is cleaned and split into chunks of 1500 characters.
 
 ```python
@@ -55,6 +59,7 @@ The uploaded PDF file is processed using `PyPDF2.PdfReader`. The extracted text 
 ```
 
 ### Step 3: OpenAI API Calls
+
 For each chunk of text, a call is made to the OpenAI API. The response is appended to a list. The progress of this process is displayed in a progress bar.
 
 ```python
@@ -66,6 +71,7 @@ For each chunk of text, a call is made to the OpenAI API. The response is append
 ```
 
 ### Step 4: Word Document Creation
+
 The responses gathered from the OpenAI API calls are compiled into a Word document using `create_word_document` function from `utils.document_creation`.
 
 ```python
@@ -74,6 +80,7 @@ The responses gathered from the OpenAI API calls are compiled into a Word docume
 ```
 
 ### Step 5: Download the Transformed Document
+
 The user is then able to download the transformed Word document.
 
 ```python
@@ -89,3 +96,21 @@ if __name__ == "__main__":
 ```
 
 Make sure to install the necessary dependencies as specified in the `requirements.txt` file.
+
+## Usage
+
+1. Run the python script in your terminal.
+2. Input the System Name and Compose Prompt.
+3. Upload your PDF document.
+4. Click on the `Transform to Elegant Document` button.
+5. Download the AI-enhanced Word document.
+
+## Contributions
+
+This project is open-source and contributions are more than welcome. If you wish to contribute, please adhere to the code of conduct, fork the project, make your changes and submit a pull request.
+
+## Conclusion
+
+Wordify is a free tool that accepts PDF as input and outputs an AI-enhanced Word document. The Word document can be edited as per the user's needs, making it a very flexible tool. Please note that the source code is available on GitHub.
+
+Remember, this tool is to help you write better and not to replace your unique writing style and creativity. Use it responsibly!

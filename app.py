@@ -16,7 +16,7 @@ OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 
 def main():
-    st.title("Elegant PDF to Word Transformation")
+    st.title("Wordify: Increase the length of your document with AI")
 
     # User Input Section
     st.header("Step 1: Upload PDF and Input")
